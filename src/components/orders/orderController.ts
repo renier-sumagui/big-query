@@ -69,11 +69,11 @@ const collectAllOrdersForBulkUpload = async () => {
     let stores = await StoreRepository.getAllStoresWithIntegrations();
 
     // TODO: Uncomment the lines below after testing
-    // stores = stores.filter(store => {
-    //     return store.integrations?.some((integration: any) => 
-    //         integration.name === 'BigQuery' && integration.enabled === true
-    //     );
-    // });
+    stores = stores.filter(store => {
+        return store.integrations?.some((integration: any) => 
+            integration.name === 'BigQuery' && integration.enabled === true
+        );
+    });
 
     const limit = pLimit(10);
     let totalUploaded = 0;
