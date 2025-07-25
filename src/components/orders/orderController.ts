@@ -71,7 +71,7 @@ const collectAllOrdersForBulkUpload = async () => {
     // TODO: Uncomment the lines below after testing
     // stores = stores.filter(store => {
     //     return store.integrations?.some((integration: any) => 
-    //         integration.name === 'LOOKER' && integration.enabled === true
+    //         integration.name === 'BigQuery' && integration.enabled === true
     //     );
     // });
 
